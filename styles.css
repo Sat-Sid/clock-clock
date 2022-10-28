@@ -1,0 +1,193 @@
+:root {
+    --background_color: #333333;
+    --yellow_color: #ffff00;
+    --aqua_color: #00ffff;
+    --white_color: #ffffff;
+    --dial_width_height: calc(200px + 5vw);
+
+    --font_weight_light: 100;
+    --font_weight_regular: 700;
+    --font_weight_bold: 800;
+}
+
+body {
+    background-color: var(--background_color);
+    font-family: Montserrat ,sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+footer {
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: var(--font_weight_light);
+    color: var(--white_color);
+}
+
+/* Toggle button */
+.toggle_bar {
+    width: 50%;
+    margin: 20px auto 0;
+}
+
+/* Clock body styles */
+.clock_body {
+    border-radius: 50%;
+    height: var(--dial_width_height);
+    width: var(--dial_width_height);
+    position: relative;
+}
+
+/* Styles for Digital clock */
+
+.digital_clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: var(--font_weight_bold);
+}
+
+.digital_clock img {
+    width: calc(var(--dial_width_height) - 20px);
+    height: calc(var(--dial_width_height) - 20px);
+    position: fixed;
+}
+
+.digital_time_date {
+    display: flex;
+    align-items: center;
+}
+
+.digital_time_date p {
+    color: var(--aqua_color);
+    margin: 0 auto;
+    font-size: calc(0.9rem + 0.1vw);
+}
+
+.digital_date {
+    position: absolute;
+    left: 20%;
+    font-weight: var(--font_weight_regular);
+}
+
+.digital_time h1 {
+    color: var(--white_color);
+
+    font-weight: var(--font_weight_bold);
+}
+
+.clock_body_digital {
+    border:0.15rem solid var(--aqua_color);
+    align-items: center;
+}
+
+
+/* Styles for Analog clock */
+
+.clock_body_analog {
+    border:0.15rem solid var(--yellow_color);
+}
+
+.clock_body_analog::before {
+    content: "";
+    border-radius: 50%;
+    height: var(--dial_width_height);
+    width: var(--dial_width_height);
+    position: absolute;
+    opacity: 0.2;
+    /* box-shadow: 0 0 20px 2px var(--yellow_color), inset 0 0 20px 2px var(--yellow_color); */
+    box-shadow: -10px 5px 20px 2px var(--yellow_color), inset -10px 5px 20px 2px var(--yellow_color);
+}
+
+.analog_clock {
+    display: flex;
+    height: 100%;
+}
+
+/* Digits inside clock*/
+
+.clock_digits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.middle_digits {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.clock_digits p {
+    color: var(--aqua_color);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    font-weight: var(--font_weight_bold);
+}
+
+p.digit_21::after {
+    content: "09";
+    margin-left: 0.5rem;
+}
+
+p.digit_15::before {
+    content: "03";
+    margin-right: 0.5rem;
+}
+
+p.digit_15::before, p.digit_21::after, p.digit_12, p.digit_06 {
+    color: var(--yellow_color);
+    font-size: smaller;
+    font-weight: var(--font_weight_light);
+}
+
+/*Clock hands*/
+.clock_hands {
+    position: absolute;
+    top: 52%;
+    transform: rotate(180deg);
+    transition: transform 2s;
+    right: 50%;
+}
+
+.clock_hands div {
+    position: absolute;
+}
+
+.hr_hand, .mt_hand, .sec_hand {
+    width: 2px;
+    transform-origin: 0 0;
+    border-radius: 50%;
+}
+
+.hr_hand {
+    height: 60px;
+    background-color: var(--yellow_color);
+}
+
+.mt_hand {
+    height: 80px;
+    background-color: var(--yellow_color);
+}
+
+.sec_hand {
+    height: 90px;
+    background-color: var(--aqua_color);
+}
+
+.cl_dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--aqua_color);
+    border-radius: 50%;
+    transform: translate(-5px, -3px );
+}

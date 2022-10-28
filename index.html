@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Clock</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-check form-switch form-check-reverse toggle_bar">
+        <label class="label_span" for="switch_btn"></label>
+        <input id= "switch_btn" type="checkbox" class="form-check-input" checked>
+    </div>
+    <main>
+        <!-- main clock body -->
+        <div class="clock_body clock_body_digital">
+            <!-- Digital Clock -->
+            <div class="digital_clock">
+                <img class="clock_frame" src="clock_illu.svg" alt="clock frame">
+                <div class="digital_time_date">
+                    <div class="digital_date">
+                        <p class="d_month">OCT</p>
+                        <P class="d_date">02</P>
+                    </div>
+                    <div class="digital_time">
+                        <h1 class="d_hour">01</h1>
+                        <h1 class="d_minutes">00</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- Analog Clock -->
+            <div class="analog_clock d-none">
+                <div class="clock_digits">
+                    <div class="top_digits">
+                        <p class="digit_24">00</p>
+                        <p class="digit_12">12</p>
+                    </div>
+                    <div class="middle_digits">
+                        <div class="left_digits">
+                            <p class="digit_21">21</p>
+                        </div>
+                        <div class="right_digits">
+                            <p class="digit_15">15</p>
+                        </div>
+                    </div>
+                    <div class="bottom_digits">
+                        <p class="digit_06">06</p>
+                        <p class="digit_18">18</p>
+                    </div>
+                </div>
+                <div class="clock_hands clock_dot">
+                    <div class="hr_hand"></div>
+                    <div class="mt_hand"></div>
+                    <div class="sec_hand"></div>
+                    <div class="cl_dot"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2022 Sat-Sid & Co.</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
